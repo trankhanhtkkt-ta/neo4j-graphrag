@@ -35,6 +35,6 @@ llm = OpenAILLM(model_name="gpt-4o", model_params={"temperature": 0})
 rag = GraphRAG(retriever=vc_retriever, llm=llm)
 
 # Query the graph
-query_text = "who dirrected a movie set in 1375 in Imperial China?"
+query_text = "who directed a movie set in 1375 in Imperial China?"
 response = rag.search(query_text=query_text, retriever_config={"top_k": 3})
 print(response.answer)
